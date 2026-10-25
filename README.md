@@ -7,7 +7,7 @@ No usa librerías externas, solo las funciones de `Math` de JavaScript.
 ## Estructura
 
 - `index.html`: interfaz
-- `css/estilos.css`: estilos
+- `estilos.css`: estilos
 - `js/geo.js`: funciones de cálculo (haversine, ley de cosenos, rumbo, punto intermedio)
 - `js/app.js`: lectura del formulario, resultados y dibujo del mapa
 
