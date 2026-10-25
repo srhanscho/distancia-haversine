@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Distancia entre dos puntos - Haversine</title>
+<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+<div class="contenedor">
+  <h1>Distancia entre dos puntos de la Tierra</h1>
+  <p class="sub">Formula del semiverseno (haversine). Coordenadas en grados decimales: latitud de -90 a 90 y longitud de -180 a 180 (oeste y sur negativos).</p>
+
+  <div class="caja puntos">
+    <div class="punto">
+      <h2>Punto A</h2>
+      <label for="presetA">Lugar de ejemplo</label>
+      <select id="presetA"></select>
+      <label for="latA">Latitud (&phi;1)</label>
+      <input id="latA" type="number" step="any">
+      <label for="lonA">Longitud (&lambda;1)</label>
+      <input id="lonA" type="number" step="any">
+    </div>
+    <div class="punto">
+      <h2>Punto B</h2>
+      <label for="presetB">Lugar de ejemplo</label>
+      <select id="presetB"></select>
+      <label for="latB">Latitud (&phi;2)</label>
+      <input id="latB" type="number" step="any">
+      <label for="lonB">Longitud (&lambda;2)</label>
+      <input id="lonB" type="number" step="any">
+    </div>
+  </div>
+
+  <div class="caja">
+    <label for="radio">Radio de la esfera (km)</label>
+    <input id="radio" type="number" step="any" value="6371">
+    <button id="calcular">Calcular</button>
+    <div id="msg" class="error"></div>
+  </div>
+
+  <div class="caja">
+    <div>Distancia A &rarr; B (haversine):</div>
+    <div class="grande" id="distancia">-</div>
+    <table>
+      <tr><th>Dato</th><th>Valor</th></tr>
+      <tr><td>Coordenadas A</td><td id="tA">-</td></tr>
+      <tr><td>Coordenadas B</td><td id="tB">-</td></tr>
+      <tr><td>Angulo central c</td><td id="tC">-</td></tr>
+      <tr><td>Ley de cosenos (comparacion)</td><td id="tCos">-</td></tr>
+      <tr><td>Calculo "plano" (sin curvatura)</td><td id="tPlano">-</td></tr>
+      <tr><td>Rumbo inicial desde A</td><td id="tRumbo">-</td></tr>
+    </table>
+  </div>
+
+  <div class="caja">
+    <div><b>Paso a paso</b></div>
+    <div class="pasos" id="pasos">-</div>
+  </div>
+
+  <div class="caja">
+    <canvas id="mapa" width="860" height="430"></canvas>
+    <div class="leyenda">Proyeccion equirectangular. Linea roja: arco de circulo maximo (ruta real mas corta). Linea gris punteada: recta en el mapa.</div>
+  </div>
+</div>
+
+<script src="js/geo.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

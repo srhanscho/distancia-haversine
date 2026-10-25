@@ -1,0 +1,20 @@
+body { font-family: Arial, sans-serif; margin: 0; background: #f2f2f2; color: #222; }
+.contenedor { max-width: 900px; margin: 0 auto; padding: 16px; }
+h1 { font-size: 22px; margin: 8px 0 4px; }
+p.sub { margin: 0 0 16px; color: #555; font-size: 14px; }
+.caja { background: #fff; border: 1px solid #ccc; padding: 14px; margin-bottom: 14px; }
+.puntos { display: flex; gap: 14px; flex-wrap: wrap; }
+.punto { flex: 1; min-width: 240px; }
+.punto h2 { font-size: 16px; margin: 0 0 8px; }
+label { display: block; font-size: 13px; margin-top: 6px; }
+input, select { width: 100%; box-sizing: border-box; padding: 6px; font-size: 14px; }
+#radio { max-width: 200px; }
+button { margin-top: 12px; padding: 8px 18px; font-size: 15px; cursor: pointer; }
+table { border-collapse: collapse; width: 100%; font-size: 14px; margin-top: 10px; }
+td, th { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+th { background: #eee; }
+.grande { font-size: 26px; font-weight: bold; }
+.pasos { font-family: Consolas, monospace; font-size: 13px; white-space: pre-wrap; background: #fafafa; border: 1px dashed #bbb; padding: 8px; overflow-x: auto; }
+.error { color: #b00; font-size: 13px; }
+canvas { width: 100%; height: auto; border: 1px solid #999; background: #e8f1f8; }
+.leyenda { font-size: 12px; color: #555; margin-top: 4px; }
